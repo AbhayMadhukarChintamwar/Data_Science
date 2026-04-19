@@ -1,4 +1,12 @@
 
+def log_deco(func):
+    def wrap(*args):
+        print('values ', args)
+        result = func(*args)
+        print('result ', result)
+        return result
+    return wrap
+
 def greater_first(func): #decorator
     def wrap(a,b):
         if a<b:
@@ -6,20 +14,25 @@ def greater_first(func): #decorator
         return func(a,b) #call the original function
     return wrap  #return the wrapper function
 
-# @greater_first #decorator
+@log_deco #decorator
+@greater_first #decorator
 def divide(a,b):
     return a/b
 
-# @greater_first #decorator
+
+@greater_first #decorator
 def subtract(a,b):
     return a-b
 
+@log_deco #decorator
+def add(a,b,c):
+    return a+b+c
 
-divide = greater_first(divide) #we can also use the decorator by calling the greater_first function and passing the divide function as an argument. This will return the wrapper function which we can assign to the divide variable.
-subtract = greater_first(subtract) #we can also use the decorator by calling the greater_first function and passing the subtract function as an argument. This will return the wrapper function which we can assign to the subtract variable.
-
-result1 = divide(4,2)
+result1 = divide(4,7)
 print(result1)
 
 result2 = subtract(4,2)
 print(result2)
+
+result3 = add(4,2,6)
+print(result3)
