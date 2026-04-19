@@ -22,3 +22,8 @@ def add(a,b):
 @greater_first
 def sub(a,b):
     return a - b
+
+
+if __name__ == '__main__':
+    print('in calc',add(6,5))
+    print('in calc',sub(7,5))
