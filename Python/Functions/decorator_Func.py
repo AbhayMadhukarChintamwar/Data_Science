@@ -1,6 +1,6 @@
 
 def log_deco(func):
-    def wrap(*args):
+    def wrap(*args):  #*args allows the wrapper function to accept any number of positional arguments
         print('values ', args)
         result = func(*args)
         print('result ', result)
