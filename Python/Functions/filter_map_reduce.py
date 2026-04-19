@@ -9,9 +9,10 @@ nums = [1,2,3,4,5,6,7,8,9]
 # def is_even(n):
 #     return  n % 2 == 0
 
-is_even = lambda n: n % 2 == 0
+# is_even = lambda n: n % 2 == 0
 
-evens = list(filter(is_even, nums))  # filter takes a function and an iterable and returns an iterator that produces those items of the iterable for which the function returns true. In this case, we are using the is_even function to filter out the even numbers from the nums list.
+
+evens = list(filter(lambda n: n % 2 == 0, nums))  # filter takes a function and an iterable and returns an iterator that produces those items of the iterable for which the function returns true. In this case, we are using the is_even function to filter out the even numbers from the nums list.
 
 
 print(evens)
