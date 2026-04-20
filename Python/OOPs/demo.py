@@ -4,4 +4,13 @@ class computer:
 
 
 comp1 = computer()
-comp1.config()
+comp2 = computer()
+
+
+
+# computer.config(comp1) # calling method using class name
+# computer.config(comp2) # calling method using class name
+
+comp1.config() # calling method using object name
+comp2.config() # calling method using object name
+
