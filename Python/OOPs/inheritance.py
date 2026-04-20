@@ -1,5 +1,5 @@
 
-class A:
+class A: # single inheritance
 
     def f1(self):
         print('F1 works')
@@ -8,7 +8,7 @@ class A:
         print('F2 works')
 
 
-class B(A):
+class B(A): # single inheritance
 
     def f3(self):
         print('F3 works')
@@ -16,10 +16,11 @@ class B(A):
     def f4(self):
         print('F4 works')
 
-class C(B):
+class C(B): # multiple inheritance is not supported in python but we can achieve it using mixins
 
     def f5(self):
         print('F5 works')
+
 
 
 
