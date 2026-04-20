@@ -1,6 +1,9 @@
 
 class A: # single inheritance
 
+    def __init__(self):
+        print('in A init')
+
     def f1(self):
         print('F1 works')
 
@@ -8,7 +11,11 @@ class A: # single inheritance
         print('F2 works')
 
 
-class B: # single inheritance
+class B(A): # single inheritance
+
+    def __init__(self):
+        super().__init__() # calling parent class constructor
+        print('in B init')
 
     def f3(self):
         print('F3 works')
@@ -16,7 +23,7 @@ class B: # single inheritance
     def f4(self):
         print('F4 works')
 
-class C(A,B):  # multiple inheritance
+class C(B):  # multiple inheritance
 
     def f5(self):
         print('F5 works')
