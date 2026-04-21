@@ -1,7 +1,8 @@
 import numpy as np
+mat = [1,2,3,'gre',1.5]
+matrix = np.array([1,2,3,'gre',1.5])
 
-matrix = np.array([[1, 2, 3],
-                   [4, 5, 6]])
-
-print("Matrix:\n", matrix)
-print("Shape:", matrix.shape)
+print(type(mat))
+print(mat)
+print(type(matrix))
+print(matrix)
