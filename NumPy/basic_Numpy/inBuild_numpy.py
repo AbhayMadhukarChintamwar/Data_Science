@@ -48,3 +48,25 @@ print(arr) # Output: [[1 1 1],
 
 arr = np.full(5, 7) # This creates a 1D array of length 5 filled with the value 7.
 print(arr) # Output: [7 7 7 7 7] This creates a 1D array of length 5 filled with the value 7.
+
+
+arr = np.full([2,3], 9) # This creates a 2D array (matrix) with 2 rows and 3 columns, filled with the value 9.
+print(arr) # Output: [[9 9 9],
+            #         [9 9 9]] This creates a 2D array (matrix) with 2 rows and 3 columns, filled with the value 9.
+
+
+# np.empty -> array full of random values (uninitialized)
+
+arr = np.empty([2,3]) # This creates a 2D array (matrix) with 2 rows and 3 columns, filled with uninitialized values (random values that may be present in memory).
+print(arr) # Output: [[0. 0. 0.],
+            #         [0. 0. 0.]] This creates a 2D array (matrix) with 2 rows and 3 columns, filled with uninitialized values (random values that may be present in memory).
+
+
+# np.random.rand -> array full of random values between 0 and 1
+
+arr = np.random.rand(5) # This creates a 1D array of length 5 filled with random values between 0 and 1.
+print(arr) # Output: [0.123 0.456 0.789 0.234 0.567] This creates a 1D array of length 5 filled with random values between 0 and 1.
+
+arr = np.random.rand(2,3) # This creates a 2D array (matrix) with 2 rows and 3 columns, filled with random values between 0 and 1.
+print(arr) # Output: [[0.123 0.456 0.789],
+            #         [0.234 0.567 0.890]] This creates a 2D array (matrix) with 2 rows and 3 columns, filled with random values between 0 and 1.
