@@ -63,10 +63,3 @@ print(arr) # Output: [[0. 0. 0.],
 
 
 # np.random.rand -> array full of random values between 0 and 1
-
-arr = np.random.rand(5) # This creates a 1D array of length 5 filled with random values between 0 and 1.
-print(arr) # Output: [0.123 0.456 0.789 0.234 0.567] This creates a 1D array of length 5 filled with random values between 0 and 1.
-
-arr = np.random.rand(2,3) # This creates a 2D array (matrix) with 2 rows and 3 columns, filled with random values between 0 and 1.
-print(arr) # Output: [[0.123 0.456 0.789],
-            #         [0.234 0.567 0.890]] This creates a 2D array (matrix) with 2 rows and 3 columns, filled with random values between 0 and 1.
