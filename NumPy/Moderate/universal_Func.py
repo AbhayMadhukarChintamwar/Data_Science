@@ -11,3 +11,4 @@ print(sqrts)
 # Exponential  e^x = np.exp(arr)
 expo = np.exp([1,2])
 print(expo)
+
