@@ -13,3 +13,6 @@ print(max_Price)
 print(df.max())
 print(df.min())
 print(df['Price'].mean())
+
+data = pd.DataFrame(df)
+print(data)
