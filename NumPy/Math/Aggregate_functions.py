@@ -43,3 +43,17 @@ print(min_matrix) # Output: 1
 max_matrix = np.max(arr)  # Maximum element
 print('Maximum element in the matrix :')
 print(max_matrix) # Output: 9
+
+
+print(np.sum(arr, axis=0))  # Sum along columns [1+4+7, 2+5+8, 3+6+9] = [12, 15, 18]
+print(np.sum(arr, axis=1))  # Sum along rows [1+2+3, 4+5+6, 7+8+9] = [6, 15, 24]
+
+# cumulative operations -> cumulative sum, cumulative product, etc.
+cumsum_matrix = np.cumsum(arr)  # Cumulative sum of all elements
+print('Cumulative sum of all elements in the matrix :')
+print(cumsum_matrix) # Output: [ 1  3  6 10 15 21 28 36 45]
+
+cumprod_matrix = np.cumprod(arr)  # Cumulative product of all elements
+print('Cumulative product of all elements in the matrix :')
+print(cumprod_matrix) # Output: [    1     2     6    24   120   720  5040 40320 362880]
+
