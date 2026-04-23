@@ -1,6 +1,7 @@
 import pandas as pd
 
-df = pd.read_csv("finance_small_data.csv")
+
+df = pd.read_csv("finance_big_data.csv")
 
 print('Head of data : ')
 print(df.head())
@@ -175,3 +176,12 @@ print(df)
             # 99  2022-07-08      HDFC  Banking             Sell  57.25         5       286.25           4
 
             # [100 rows x 8 columns]
+
+print("Duplicated : ")
+print(df.duplicated('Price'))
+
+print("Duplicated : ")
+print(df.duplicated('Company'))
+
+print("Duplicated : ")
+print(df.duplicated('Total_Value'))
