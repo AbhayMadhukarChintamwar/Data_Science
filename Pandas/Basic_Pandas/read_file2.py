@@ -114,3 +114,8 @@ print(df.loc[df['Company']=='Infosys'].sort_values(by='Sector'))
             # 57  2023-06-05  Infosys       IT              Buy  52.28         8       418.24
             # 61  2022-06-05  Infosys       IT              Buy  79.88         1        79.88
 
+
+
+#  What is the  total shortest (total minimum) value of Infosys
+
+print(df.loc[df['Company']=='Infosys' , 'Total_Value'].min())  # 57.58
