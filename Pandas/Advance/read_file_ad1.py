@@ -54,3 +54,5 @@ print(df['Ratio'].value_counts())
 # How many words have a Ratio 267.0?  //115
 
 print(df[df['Ratio']==267.0].shape)  # (115, 8)
+
+print(df.query('Ratio == 267.0').shape)  # (115, 8)
