@@ -78,3 +78,19 @@ print(df['Price'].value_counts().head())
             # 75.56    1
             # 73.30    1
             # Name: count, dtype: int64
+
+
+print(df.loc[df['Company']=='Infosys'].head(10))
+
+            #           Date  Company   Sector Transaction_Type  Price  Quantity  Total_Value
+            # 0   2020-10-17  Infosys  Banking              Buy  81.49         1        81.49
+            # 9   2020-09-12  Infosys  Banking              Buy  89.77         7       628.39
+            # 20  2020-02-22  Infosys  Finance             Sell  73.07         5       365.35
+            # 22  2023-06-09  Infosys  Finance              Buy  53.76         2       107.52
+            # 23  2020-03-18  Infosys   Energy              Buy  63.38         1        63.38
+            # 42  2023-08-10  Infosys       IT              Buy  96.05         6       576.30
+            # 54  2023-10-18  Infosys  Finance              Buy  89.72         2       179.44
+            # 56  2021-10-03  Infosys  Finance             Sell  98.64        10       986.40
+            # 57  2023-06-05  Infosys       IT              Buy  52.28         8       418.24
+            # 61  2022-06-05  Infosys       IT              Buy  79.88         1        79.88
+
