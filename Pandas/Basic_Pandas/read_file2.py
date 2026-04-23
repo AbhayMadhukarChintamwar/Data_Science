@@ -128,3 +128,5 @@ print(df.loc[
 
             #          Date  Company   Sector Transaction_Type  Price  Quantity  Total_Value
             # 82  2020-09-05  Infosys  Finance             Sell  57.58         1        57.58
+
+
