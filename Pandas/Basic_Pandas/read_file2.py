@@ -119,3 +119,12 @@ print(df.loc[df['Company']=='Infosys'].sort_values(by='Sector'))
 #  What is the  total shortest (total minimum) value of Infosys
 
 print(df.loc[df['Company']=='Infosys' , 'Total_Value'].min())  # 57.58
+
+
+print(df.loc[
+    (df['Company']=='Infosys') &
+    (df['Total_Value']== 57.58)
+])
+
+            #          Date  Company   Sector Transaction_Type  Price  Quantity  Total_Value
+            # 82  2020-09-05  Infosys  Finance             Sell  57.58         1        57.58
