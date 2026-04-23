@@ -273,3 +273,20 @@ print(df.loc[df['Company']=='Infosys'].head(10))
             # 37  2021-08-04  Infosys  Banking              Buy   330.52       697    230372.44           7
             # 40  2023-02-14  Infosys       IT             Sell  3733.29       674   2516237.46           7
             # 42  2023-10-30  Infosys       IT             Sell  2609.51       700   1826657.00           7
+
+print(df.loc[df['Company']=='Infosys'].sort_values(by='Sector'))
+
+            #    Date  Company   Sector Transaction_Type    Price  Quantity  Total_Value  char_count
+            # 50755  2021-03-05  Infosys  Banking             Sell   903.07       145    130945.15           7
+            # 31579  2021-07-12  Infosys  Banking             Sell  1135.04       366    415424.64           7
+            # 31573  2021-07-01  Infosys  Banking              Buy   196.45       462     90759.90           7
+            # 31551  2021-12-25  Infosys  Banking             Sell  1302.54       719    936526.26           7
+            # 31530  2022-12-15  Infosys  Banking              Buy  1776.30       605   1074661.50           7
+            # ...           ...      ...      ...              ...      ...       ...          ...         ...
+            # 27935  2023-08-17  Infosys       IT             Sell   888.13       723    642117.99           7
+            # 27943  2023-01-26  Infosys       IT             Sell  2342.35       224    524686.40           7
+            # 27955  2022-08-15  Infosys       IT              Buy  3877.57       356   1380414.92           7
+            # 27859  2020-11-16  Infosys       IT             Sell  4910.89       802   3938533.78           7
+            # 99992  2023-03-23  Infosys       IT              Buy  4539.89       667   3028106.63           7
+
+            # [16523 rows x 8 columns]
