@@ -180,8 +180,52 @@ print(df)
 print("Duplicated : ")
 print(df.duplicated('Price'))
 
+            # Duplicated :
+            # 0        False
+            # 1        False
+            # 2        False
+            # 3        False
+            # 4        False
+            #          ...
+            # 99995    False
+            # 99996    False
+            # 99997     True
+            # 99998    False
+            # 99999    False
+            # Length: 100000, dtype: bool
+
+
 print("Duplicated : ")
 print(df.duplicated('Company'))
 
+            # Duplicated :
+            # 0        False
+            # 1        False
+            # 2        False
+            # 3        False
+            # 4         True
+            #          ...
+            # 99995     True
+            # 99996     True
+            # 99997     True
+            # 99998     True
+            # 99999     True
+            # Length: 100000, dtype: bool
+
+
 print("Duplicated : ")
 print(df.duplicated('Total_Value'))
+
+            # Duplicated :
+            # 0        False
+            # 1        False
+            # 2        False
+            # 3        False
+            # 4        False
+            #          ...
+            # 99995    False
+            # 99996    False
+            # 99997    False
+            # 99998    False
+            # 99999    False
+            # Length: 100000, dtype: bool
