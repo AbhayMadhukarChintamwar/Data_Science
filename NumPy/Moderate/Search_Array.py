@@ -42,7 +42,9 @@ print(sorted_array)  # ['abhay' 'amar' 'avinash' 'kittu' 'praful' 'swanand']
 
 arr = np.array([['abhay','kittu','amar'],['swanand','praful','avinash']])
 sorted_array =np.sort(arr)
-print(sorted_array)  # ['abhay' 'amar' 'avinash' 'kittu' 'praful' 'swanand']
+print(sorted_array)
+            # [['abhay' 'amar' 'kittu']
+            #  ['avinash' 'praful' 'swanand']]
 
 
 
