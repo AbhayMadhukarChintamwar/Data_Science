@@ -205,8 +205,6 @@ print(Power_of_multiply_matrix)
             #  [15 22]]
 
 
-
-
 Power_of_inverse_matrix = np.linalg.matrix_power(matrix_1, -2)
 
 print('Normal Matrix :')
