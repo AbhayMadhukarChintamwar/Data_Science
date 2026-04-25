@@ -80,6 +80,8 @@ print()
 print('This is the Subtraction of arrays :')
 print(sub_array)
 
+print()
+
             # This is the Subtraction of matrix :
             # [[0 0]
             #  [0 0]]
@@ -87,3 +89,81 @@ print(sub_array)
             # This is the Subtraction of arrays :
             # [[0 0]
             #  [0 0]]
+
+
+
+# Matrix Function
+
+
+
+
+matrix_1 = np.matrix([[1, 2],
+                      [3, 4]])
+
+matrix_2 = np.matrix([[5, 6],
+                      [7, 8]])
+
+# Transpose functions
+normal_matrix = np.matrix([[1,2,3,],
+                         [4,5,6],
+                         [7,8,9]])
+
+# transpose_matrix = np.transpose(normal_matrix)
+transpose_matrix = normal_matrix.T
+
+print('Normal Matrix :')
+print(normal_matrix)
+print()
+print('Transpose Matrix :')
+print(transpose_matrix)
+
+            # Normal Matrix :
+            # [[1 2 3]
+            #  [4 5 6]
+            #  [7 8 9]]
+
+            # Transpose Matrix :
+            # [[1 4 7]
+            #  [2 5 8]
+            #  [3 6 9]]
+
+
+# Swapaxes function
+
+swap_axes_matrix = np.swapaxes(normal_matrix, 1,0)
+
+print('Normal Matrix :')
+print(normal_matrix)
+print()
+print('Swap Axes Matrix :')
+print(swap_axes_matrix)
+
+            # Normal Matrix :
+            # [[1 2 3]
+            #  [4 5 6]
+            #  [7 8 9]]
+
+            # Swap Axes Matrix :
+            # [[1 4 7]
+            #  [2 5 8]
+            #  [3 6 9]]
+
+
+# inverse function
+
+inverse_matrix = np.linalg.inv(matrix_1)
+
+print('Single Matrix  :')
+print(matrix_1)
+print()
+print('Inverse Matrix :')
+print(inverse_matrix)
+
+            # Single Matrix  :
+            # [[1 2]
+            #  [3 4]]
+
+            # Inverse Matrix :
+            # [[-2.   1. ]
+            #  [ 1.5 -0.5]]
+
