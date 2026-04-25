@@ -205,3 +205,18 @@ print()
 
 print(len(df[df['Salary']>1000000])) # 7104
 print()
+
+
+print(df.iloc[0:10,[1,4,5,6]])
+
+            #           Name     Company  current_Year       City
+            # 0   Employee_1  Microsoft           2026     Mumbai
+            # 1   Employee_2      Amazon          2026       Pune
+            # 2   Employee_3         TCS          2026  Hyderabad
+            # 3   Employee_4  Microsoft           2026       Pune
+            # 4   Employee_5   Accenture          2026       Pune
+            # 5   Employee_6      Google          2026  Bangalore
+            # 6   Employee_7      Google          2026     Mumbai
+            # 7   Employee_8   Accenture          2026     Mumbai
+            # 8   Employee_9      Amazon          2026       Pune
+            # 9  Employee_10      Amazon          2026  Bangalore
