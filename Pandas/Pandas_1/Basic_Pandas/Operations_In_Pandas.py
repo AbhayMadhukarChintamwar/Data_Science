@@ -40,3 +40,71 @@ print()
             # unique       12000          2                 10         8      5
             # top     Employee_1         IT  Financial Analyst  Deloitte   Pune
             # freq             1       6008               1239      1603   2491
+
+print(df[['Salary']])
+
+            #        Salary
+            # 0      1514341
+            # 1      1495105
+            # 2      1387438
+            # 3      1345806
+            # 4      1962417
+            # ...        ...
+            # 11995  1537932
+            # 11996  1970199
+            # 11997   650399
+            # 11998  1551349
+            # 11999   999198
+
+            # [12000 rows x 1 columns]
+
+print(df[['Salary']][8:22])
+print()
+
+            #      Salary
+            # 8   1271285
+            # 9    821755
+            # 10  1621641
+            # 11   624707
+            # 12   855997
+            # 13  1614164
+            # 14  1119958
+            # 15  1630198
+            # 16   363332
+            # 17  1352955
+            # 18   971856
+            # 19   613716
+            # 20   984228
+            # 21   305283
+
+print(df[['Salary', 'Company']][8:22])
+print()
+
+            #    Salary     Company
+            # 8   1271285      Amazon
+            # 9    821755      Amazon
+            # 10  1621641     Infosys
+            # 11   624707       Wipro
+            # 12   855997         TCS
+            # 13  1614164      Google
+            # 14  1119958      Amazon
+            # 15  1630198      Google
+            # 16   363332  Microsoft
+            # 17  1352955       Wipro
+            # 18   971856     Infosys
+            # 19   613716      Amazon
+            # 20   984228    Deloitte
+            # 21   305283         TCS
+
+print(df[['Salary', 'Company']][8:22:2])
+print()
+
+
+            #      Salary     Company
+            # 8   1271285      Amazon
+            # 10  1621641     Infosys
+            # 12   855997         TCS
+            # 14  1119958      Amazon
+            # 16   363332  Microsoft
+            # 18   971856     Infosys
+            # 20   984228    Deloitte
