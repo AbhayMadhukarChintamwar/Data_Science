@@ -111,18 +111,59 @@ print(d1 // d2)
 delete_Data = df.drop('Name',axis=1)
 print(delete_Data)
 
-#        Employee_ID Department                Role     Company       City   Salary  Experience_Years
-# 0                1         IT   Backend Developer  Microsoft      Mumbai  1514341               2.4
-# 1                2    Finance     DevOps Engineer      Amazon       Pune  1495105               8.9
-# 2                3         IT  Frontend Developer         TCS  Hyderabad  1387438              13.9
-# 3                4         IT   Software Engineer  Microsoft        Pune  1345806               0.6
-# 4                5         IT      Data Scientist   Accenture       Pune  1962417              10.2
-# ...            ...        ...                 ...         ...        ...      ...               ...
-# 11995        11996    Finance   Investment Banker  Microsoft       Delhi  1537932               1.0
-# 11996        11997    Finance   Investment Banker    Deloitte      Delhi  1970199               6.9
-# 11997        11998         IT   Financial Analyst         TCS  Hyderabad   650399               8.8
-# 11998        11999         IT      Data Scientist       Wipro      Delhi  1551349               9.0
-# 11999        12000         IT             Auditor       Wipro  Bangalore   999198               9.5
+            #        Employee_ID Department                Role     Company       City   Salary  Experience_Years
+            # 0                1         IT   Backend Developer  Microsoft      Mumbai  1514341               2.4
+            # 1                2    Finance     DevOps Engineer      Amazon       Pune  1495105               8.9
+            # 2                3         IT  Frontend Developer         TCS  Hyderabad  1387438              13.9
+            # 3                4         IT   Software Engineer  Microsoft        Pune  1345806               0.6
+            # 4                5         IT      Data Scientist   Accenture       Pune  1962417              10.2
+            # ...            ...        ...                 ...         ...        ...      ...               ...
+            # 11995        11996    Finance   Investment Banker  Microsoft       Delhi  1537932               1.0
+            # 11996        11997    Finance   Investment Banker    Deloitte      Delhi  1970199               6.9
+            # 11997        11998         IT   Financial Analyst         TCS  Hyderabad   650399               8.8
+            # 11998        11999         IT      Data Scientist       Wipro      Delhi  1551349               9.0
+            # 11999        12000         IT             Auditor       Wipro  Bangalore   999198               9.5
 
-# [12000 rows x 7 columns]
+            # [12000 rows x 7 columns]
+
+
+            # Indexing
+
+Set_Index = df.set_index('Salary')
+
+print(Set_Index)
+            # Salary   Employee_ID            Name Department                Role     Company       City  Experience_Years
+            # 1514341            1      Employee_1         IT   Backend Developer  Microsoft      Mumbai               2.4
+            # 1495105            2      Employee_2    Finance     DevOps Engineer      Amazon       Pune               8.9
+            # 1387438            3      Employee_3         IT  Frontend Developer         TCS  Hyderabad              13.9
+            # 1345806            4      Employee_4         IT   Software Engineer  Microsoft        Pune               0.6
+            # 1962417            5      Employee_5         IT      Data Scientist   Accenture       Pune              10.2
+            # ...              ...             ...        ...                 ...         ...        ...               ...
+            # 1537932        11996  Employee_11996    Finance   Investment Banker  Microsoft       Delhi               1.0
+            # 1970199        11997  Employee_11997    Finance   Investment Banker    Deloitte      Delhi               6.9
+            # 650399         11998  Employee_11998         IT   Financial Analyst         TCS  Hyderabad               8.8
+            # 1551349        11999  Employee_11999         IT      Data Scientist       Wipro      Delhi               9.0
+            # 999198         12000  Employee_12000         IT             Auditor       Wipro  Bangalore               9.5
+
+            # [12000 rows x 7 columns]
+
+
+
+print(df.reset_index())
+
+            #       index  Employee_ID            Name Department                Role     Company       City   Salary  Experience_Years
+            # 0          0            1      Employee_1         IT   Backend Developer  Microsoft      Mumbai  1514341               2.4
+            # 1          1            2      Employee_2    Finance     DevOps Engineer      Amazon       Pune  1495105               8.9
+            # 2          2            3      Employee_3         IT  Frontend Developer         TCS  Hyderabad  1387438              13.9
+            # 3          3            4      Employee_4         IT   Software Engineer  Microsoft        Pune  1345806               0.6
+            # 4          4            5      Employee_5         IT      Data Scientist   Accenture       Pune  1962417              10.2
+            # ...      ...          ...             ...        ...                 ...         ...        ...      ...               ...
+            # 11995  11995        11996  Employee_11996    Finance   Investment Banker  Microsoft       Delhi  1537932               1.0
+            # 11996  11996        11997  Employee_11997    Finance   Investment Banker    Deloitte      Delhi  1970199               6.9
+            # 11997  11997        11998  Employee_11998         IT   Financial Analyst         TCS  Hyderabad   650399               8.8
+            # 11998  11998        11999  Employee_11999         IT      Data Scientist       Wipro      Delhi  1551349               9.0
+            # 11999  11999        12000  Employee_12000         IT             Auditor       Wipro  Bangalore   999198               9.5
+
+            # [12000 rows x 9 columns]
+
 
