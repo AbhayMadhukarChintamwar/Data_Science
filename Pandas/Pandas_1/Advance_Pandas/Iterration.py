@@ -154,7 +154,7 @@ print(df4)
             # 0   I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems. I enjoy solving complex problems using efficient algorithms and modern technologies.
 
 pd.set_option ('display.max_colwidth',500)
-df4 = pd.DataFrame({'description':[" I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems. I enjoy solving complex problems using efficient algorithms and modern technologies.","I'm  learning Python Libraries", "I'm a Data Science Engineer"]})
+df4 = pd.DataFrame({'description':[" I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems.","I'm  learning Python Libraries", "I'm a Data Science Engineer"]})
 print(df4)
             #                                                                                                                                                                                       description
             # 0   I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems. I enjoy solving complex problems using efficient algorithms and modern technologies.
@@ -168,3 +168,19 @@ print(df4)
             # 0   I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems. I enjoy solving complex problems using efficient algorithms and modern technologies.     194
             # 1                                                                                                                                                                      I'm  learning Python Libraries      30
             # 2                                                                                                                                                                         I'm a Data Science Engineer      27
+
+
+m = "I enjoy solving complex problems using efficient algorithms and modern technologies"
+print('total words : ',len(m.split()))  # its count a  total words
+            # total words :  11
+
+
+
+pd.set_option ('display.max_colwidth',500)
+df4['Word_Counts'] = df4['description'].apply(lambda x:len(x.split()))
+print(df4)
+
+            #                                                                                                      description  length  Word_Counts
+            # 0   I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems.     109           15
+            # 1                                                                                 I'm  learning Python Libraries      30            4
+            # 2                                                                                    I'm a Data Science Engineer      27            5
