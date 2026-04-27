@@ -80,3 +80,76 @@ print()
 # Pandas(Index='a1', a=1, b=4, c='Rose')
 # Pandas(Index='b1', a=2, b=5, c='Lotus')
 # Pandas(Index='c1', a=3, b=6, c='Lily')
+
+
+def Sum(x):
+    return Change_Indexing.sum()
+
+print(Change_Indexing.apply(Sum))
+
+            #               a              b              c
+            # a              6              6              6
+            # b             15             15             15
+            # c  RoseLotusLily  RoseLotusLily  RoseLotusLily
+
+
+df2 = Change_Indexing[['a','b']]
+print(df2)
+
+            #     a  b
+            # a1  1  4
+            # b1  2  5
+            # c1  3  6
+
+print(df2.apply(lambda x : x**2))
+# print(Change_Indexing[['a','b']].apply(lambda x : x**2))
+
+            #     a   b
+            # a1  1  16
+            # b1  4  25
+            # c1  9  36
+
+df3 = Change_Indexing
+
+print(df3.sort_values('c'))
+
+            #     a  b      c
+            # c1  3  6   Lily
+            # b1  2  5  Lotus
+            # a1  1  4   Rose
+
+print(df3.sort_values('c', ascending=False))
+
+            # a1  1  4   Rose
+            # b1  2  5  Lotus
+            # c1  3  6   Lily
+
+print(df3.sort_index())
+
+            #     a  b      c
+            # a1  1  4   Rose
+            # b1  2  5  Lotus
+            # c1  3  6   Lily
+
+print(df3.sort_index(ascending = False))
+
+            #     a  b      c
+            # c1  3  6   Lily
+            # b1  2  5  Lotus
+            # a1  1  4   Rose
+
+
+df4 = pd.DataFrame({'description':[" I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems. I enjoy solving complex problems using efficient algorithms and modern technologies."]})
+print(df4)
+
+            #                                          description
+            # 0   I am a dedicated tech enthusiast who loves bu...
+
+
+pd.set_option ('display.max_colwidth',500)
+df4 = pd.DataFrame({'description':[" I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems. I enjoy solving complex problems using efficient algorithms and modern technologies."]})
+print(df4)
+
+            #              description
+            # 0   I am a dedicated tech enthusiast who loves building scalable applications and exploring intelligent systems. I enjoy solving complex problems using efficient algorithms and modern technologies.
+
