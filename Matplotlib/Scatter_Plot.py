@@ -8,10 +8,7 @@ plt.title('Scatter Plot', fontsize = 20)
 plt.xlabel('Month')
 plt.ylabel('Number')
 # plt.scatter(x,y, color ='r')
-c = ['red','pink','yellow','blue','green','purple']
-
-# plt.scatter(x,y, color =c, s= 150)
 size = [300,170, 350, 264, 209, 219]
-plt.scatter(x,y, color =c, s= size)
-
-print(plt.show())
+c = [10,20,30,45,78,99]
+plt.scatter(x,y, c = c , s=size , cmap ='Accent')
+plt.show()
