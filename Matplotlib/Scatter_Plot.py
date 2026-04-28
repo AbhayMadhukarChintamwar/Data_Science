@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 x = [1,2,3,4,5,6]
 y = [4,2,3,5,1,8]
+z = [10,11,12,13,14,15]
 plt.title('Scatter Plot', fontsize = 20)
 plt.xlabel('Month')
 plt.ylabel('Number')
@@ -13,6 +14,8 @@ c = [10,20,30,45,78,99]
 plt.scatter(x,y, c = c , s=size , cmap ='jet')
 t = plt.colorbar()
 t.set_label('Colorbar', fontsize = 15)
-
+plt.scatter(x,z, c = c , s=size , cmap ='Greys')
+t = plt.colorbar()
+t.set_label('Colorbar', fontsize = 15)
 
 print(plt.show())
