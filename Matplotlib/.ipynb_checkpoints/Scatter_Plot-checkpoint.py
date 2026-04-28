@@ -9,7 +9,6 @@ plt.xlabel('Month')
 plt.ylabel('Number')
 # plt.scatter(x,y, color ='r')
 c = ['red','pink','yellow','blue','green','purple']
+plt.scatter(x,y, color =c, s= 150)
 
-# plt.scatter(x,y, color =c, s= 150)
-size = [300,170, 350, 264, 209, 219]
-plt.scatter(x,y, 
+print(plt.show())
