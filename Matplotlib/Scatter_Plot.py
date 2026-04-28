@@ -12,4 +12,6 @@ c = ['red','pink','yellow','blue','green','purple']
 
 # plt.scatter(x,y, color =c, s= 150)
 size = [300,170, 350, 264, 209, 219]
-plt.scatter(x,y, 
+plt.scatter(x,y, color =c, s= size)
+
+print(plt.show())
