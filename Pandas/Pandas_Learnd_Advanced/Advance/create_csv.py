@@ -1,50 +1,38 @@
 import pandas as pd
-import random
-from datetime import datetime, timedelta
+import numpy as np
 
-# number of rows (change to 200000, 500000, 1000000 etc.)
-num_rows = 100
+# Set random seed for reproducibility
+np.random.seed(42)
 
-# file name
-file_name = "finance_small_data.csv"
+# Number of rows
+n = 1000
 
-# sample values
-companies = ["TCS", "Infosys", "Reliance", "HDFC", "ICICI", "Wipro"]
-sectors = ["IT", "Banking", "Energy", "Finance"]
-types = ["Buy", "Sell"]
+# Generate realistic wine quality data
+data = {
+    'fixed acidity': np.round(np.random.uniform(4.0, 16.0, n), 2),
+    'volatile acidity': np.round(np.random.uniform(0.1, 1.6, n), 3),
+    'citric acid': np.round(np.random.uniform(0.0, 1.0, n), 3),
+    'residual sugar': np.round(np.random.uniform(0.5, 15.0, n), 2),
+    'chlorides': np.round(np.random.uniform(0.01, 0.2, n), 3),
+    'free sulfur dioxide': np.random.randint(1, 75, n),
+    'total sulfur dioxide': np.random.randint(6, 300, n),
+    'density': np.round(np.random.uniform(0.9900, 1.0050, n), 5),
+    'pH': np.round(np.random.uniform(2.8, 4.0, n), 2),
+    'sulphates': np.round(np.random.uniform(0.3, 2.0, n), 2),
+    'alcohol': np.round(np.random.uniform(8.0, 15.0, n), 2),
 
-start_date = datetime(2020, 1, 1)
+    # Quality score between 0 to 10
+    'quality': np.random.randint(0, 11, n)
+}
 
-# write header first
-columns = ["Date", "Company", "Sector", "Transaction_Type", "Price", "Quantity", "Total_Value"]
-pd.DataFrame(columns=columns).to_csv(file_name, index=False)
+# Create DataFrame
+df = pd.DataFrame(data)
 
-# chunk size (important for large data)
-chunk_size = 100
+# Save CSV file
+file_name = '1.0 - winequality-red.csv'
+df.to_csv(file_name, sep=';', index=False)
 
-for i in range(0, num_rows, chunk_size):
-    data = []
+print(f"CSV file '{file_name}' created successfully with {n} rows!")
 
-    for _ in range(chunk_size):
-        date = start_date + timedelta(days=random.randint(0, 1500))
-        price = round(random.uniform(100, 50), 2)
-        quantity = random.randint(1, 10)
-
-        data.append([
-            date.strftime("%Y-%m-%d"),
-            random.choice(companies),
-            random.choice(sectors),
-            random.choice(types),
-            price,
-            quantity,
-            round(price * quantity, 2)
-        ])
-
-    df = pd.DataFrame(data, columns=columns)
-
-    # append to CSV
-    df.to_csv(file_name, mode='a', header=False, index=False)
-
-    print(f"✅ Written {i + chunk_size} rows")
-
-print("🎉 Finance CSV (100K+) created successfully!")
+# Display first 5 rows
+print(df.head())
